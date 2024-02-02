@@ -6,7 +6,7 @@ on: [push]
 jobs:
   generate:
     name: sync, build & deploy
-    runs-on: [self-hosted, ISPW]
+    runs-on: [self-hosted]
     env:
       Win_Topaz_Location: 'C:\Users\sandhata\BMC\WorkbenchCLI'
    
