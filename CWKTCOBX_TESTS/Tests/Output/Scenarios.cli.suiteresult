@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<XaSuiteResult resultType="SUCCESS" containsSimulation="false">
-  <Message>Total 1 test scenarios were successfully executed</Message>
-  <Started>20240207-01-53-02</Started>
-  <Ended>20240207-01-53-13</Ended>
+<XaSuiteResult resultType="VERIFICATION_ERROR" containsSimulation="false">
+  <Message>Total 1 tests failed out of 1 tests.</Message>
+  <Started>20240207-02-09-03</Started>
+  <Ended>20240207-02-09-14</Ended>
   <XaUnitResults>
-    <XaUnitResult path="../Scenarios/CWKTCOBX_Scenario.context" xaUnitPath="../Scenarios/CWKTCOBX_Scenario.context" resultPath="CWKTCOBX_Scenario.result" containsSimulation="false" resultType="SUCCESS" duration="10952" componentUnderTest="CWKTCOBX">
+    <XaUnitResult path="../Scenarios/CWKTCOBX_Scenario.context" xaUnitPath="../Scenarios/CWKTCOBX_Scenario.context" resultPath="CWKTCOBX_Scenario.result" containsSimulation="false" resultType="VERIFICATION_ERROR" duration="10628" componentUnderTest="CWKTCOBX">
       <CC />
       <Message />
-      <DetailedMessage />
+      <DetailedMessage>Component CWKTCOBX was not executed due to an abend.</DetailedMessage>
     </XaUnitResult>
   </XaUnitResults>
 </XaSuiteResult>

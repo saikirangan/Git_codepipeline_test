@@ -1,5 +1,5 @@
-01:53:02.652 INFO      Engine           Test Scenario execution started
-01:53:02.659 INFO      Engine           Using context settings:
+02:09:03.242 INFO      Engine           Test Scenario execution started
+02:09:03.246 INFO      Engine           Using context settings:
   Engine Version                : 20.15.2.v20230719-1444_122
   Environment id                : 10.10.1.172:16196
   Environment type              : Batch
@@ -16,22 +16,22 @@
   Use Repository Server         : true
   Account Information           : 
   Dataset High Level Qualifier  : 
-01:53:02.660 INFO      Engine           Setting variables from context and context data extensions
-01:53:02.661 INFO      Engine             id: environmentId      value: 10.10.1.172:16196
-01:53:02.664 INFO      Engine             id: environmentType    value: BATCH
-01:53:02.665 INFO      Engine             id: userId             value: ADCDS
-01:53:02.665 INFO      Engine             id: accountingInfo     value: 
-01:53:02.666 INFO      Engine             id: datasetHQL         value: 
-01:53:02.680 INFO      Unittest         Interpreting Unittest of module: CWKTCOBX testscenario path: CWKTCOBX_Scenario.testscenario
-01:53:04.541 INFO      Unittest         Static JCL is being used, path is: C:/Users/sandhata/git/Git_codepipeline_test/CWKTCOBX_TESTS/Tests/JCL/Runner.jcl
-01:53:07.185 INFO      10.10.1.172-16196 Sending Job execution request to Host 
-01:53:12.325 INFO      10.10.1.172-16196 Job execution completed with status:
-  Job status     : COMPLETED
-  Job status msg : Job JOBNAME(JOB05807) ended with return code: 0000
+02:09:03.247 INFO      Engine           Setting variables from context and context data extensions
+02:09:03.248 INFO      Engine             id: environmentId      value: 10.10.1.172:16196
+02:09:03.253 INFO      Engine             id: environmentType    value: BATCH
+02:09:03.253 INFO      Engine             id: userId             value: ADCDS
+02:09:03.254 INFO      Engine             id: accountingInfo     value: 
+02:09:03.254 INFO      Engine             id: datasetHQL         value: 
+02:09:03.265 INFO      Unittest         Interpreting Unittest of module: CWKTCOBX testscenario path: CWKTCOBX_Scenario.testscenario
+02:09:05.086 INFO      Unittest         Static JCL is being used, path is: C:/Users/sandhata/git/Git_codepipeline_test/CWKTCOBX_TESTS/Tests/JCL/Runner.jcl
+02:09:07.606 INFO      10.10.1.172-16196 Sending Job execution request to Host 
+02:09:12.852 INFO      10.10.1.172-16196 Job execution completed with status:
+  Job status     : ABEND
+  Job status msg : Job JOBNAME(JOB05813) ended with ABEND code: S806
   Job name       : JOBNAME
-  Job id         : JOB05807
-  Return code    : 0000
-  Abend code     : 
-  Abend reason   : 
-01:53:13.615 INFO      Unittest         Execution completed
-01:53:13.616 INFO      Engine           Test Scenario execution ended
+  Job id         : JOB05813
+  Return code    : 
+  Abend code     : S806
+  Abend reason   : U0000
+02:09:13.880 INFO      Unittest         Execution completed
+02:09:13.880 INFO      Engine           Test Scenario execution ended
