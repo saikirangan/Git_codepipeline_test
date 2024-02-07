@@ -68,15 +68,17 @@ jobs:
           echo "url: ${{ steps.generate.outputs.url }}"
           echo "assignment id: ${{ steps.generate.outputs.assignment_id }}"
           
-       
-  jobs:
-    name: test
-    needs: generate
-    runs-on : self-hosted
-    steps:
-      - name: checkout step
-        uses: actions/checkout@v4
+      - name: test
+        if:  ${{ steps.generate.outputs.generate_failed_count == 0 }}
+        run: ${{ vars.CLIPATH }}\TotalTestFTCLI.bat -data "${{ vars.WORKSPACE }}" -host "${{ vars.HCICONNECTION }}" -port "${{ vars.PORT }}" -u "${{ vars.USERID }}" -p "${{ secrets.HCI_PASSWORD }}" -f "${{ vars.TESTFOLDERPATH }}" --runner-jcl "${{ vars.JCLPATH }}"
+        
+      - name: deploy
+        if: ${{ steps.sync.outputs.automaticBuildJson != '{}' && steps.generate.outputs.generate_failed_count == 0}}
+        uses: bmc-compuware/ispw-deploy@main
+        id: deploy
         with:
-          fetch-depth: 0
-      - name: Calling the CLI function
-        run: ${{ vars.CLIPATH }}\TotalTestFTCLI.bat -data "${{ vars.WORKSPACE }}" -host "${{ vars.HCICONNECTION }}" -port "${{ vars.PORT }}" -u "${{ vars.USERID }}" -p "${{ secrets.HCI_PASSWORD }}" -f "${{ vars.TESTFOLDERPATH }}" --runner-jcl "${{ vars.JCLPATH }}"    
+          ces_url: 'http://10.10.1.174:48226/'
+          ces_token: ${{ secrets.CES_TOKEN }}
+          srid: 'ISPT'
+          runtime_configuration: 'ISPT'
+          deploy_automatically: ${{ steps.sync.outputs.automaticBuildJson }} 
