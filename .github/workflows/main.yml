@@ -74,9 +74,9 @@ jobs:
     needs: generate
     runs-on : self-hosted
     steps:
-      #- name: checkout step
-      #  uses: actions/checkout@v4
-      #  with:
-      #    fetch-depth: 0
+      - name: checkout step
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Calling the CLI function
         run: ${{ vars.CLIPATH }}\TotalTestFTCLI.bat -data "${{ vars.WORKSPACE }}" -host "${{ vars.HCICONNECTION }}" -port "${{ vars.PORT }}" -u "${{ vars.USERID }}" -p "${{ secrets.HCI_PASSWORD }}" -f "${{ vars.TESTFOLDERPATH }}" --runner-jcl "${{ vars.JCLPATH }}"    
