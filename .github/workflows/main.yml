@@ -7,7 +7,7 @@ on:
       
 jobs:
   generate:
-    name: sync & generate
+    name: sync & generate & test
     runs-on: [self-hosted, Windows]
     env:
       Win_Topaz_Location: 'C:\Users\sandhata\BMC\WorkbenchCLI'
