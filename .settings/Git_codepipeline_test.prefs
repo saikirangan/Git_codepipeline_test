@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
+gitProjectCopybookConcatenationKey=
 ispwEditing=TRUE
+ispwGitAssignDesc=${user}-${project_name}
 ispwMappingLevel=DEV1
 ispwYamlConfigPath={project_loc}/ispwconfig.yml
