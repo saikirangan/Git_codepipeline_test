@@ -95,7 +95,7 @@
                                                                         00950000
        A000-STUDENT-ID-VAL.                                             00960000
              IF WS-STUD-ID1 IS NUMERIC                                  00970000
-                  DISPLAY 'VALID STUDENT ID'                            00980000
+                  DISPLAY 'VALID STUDENT_ID'                            00980000
              ELSE                                                       00990000
                   DISPLAY 'NOT VALID'                                   01000000
              END-IF.                                                    01010000
